@@ -1,0 +1,17 @@
+# Go
+services/gateway-go/.env
+services/gateway-go/server.exe
+services/gateway-go/bin/
+
+# Rust
+engine-rust/target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# General
+.DS_Store
+*.log
+.env

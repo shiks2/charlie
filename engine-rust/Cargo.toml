@@ -1,0 +1,25 @@
+[package]
+name = "charlie-engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["Sachin <your-email@example.com>"]
+
+[dependencies]
+# The 'Big Three' for IoT data processing in Rust:
+# 1. Serialization/Deserialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# 2. Async Runtime (Essential for high-performance networking)
+tokio = { version = "1.0", features = ["full"] }
+
+# 3. HTTP Server (To receive JSON from Go)
+# We use Axum because it's built by the Tokio team and is very fast
+axum = "0.7"
+
+# For generating unique IDs and handling time in Rust
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Future: Add this when you're ready to switch from HTTP to Kafka
+# rdkafka = "0.36"
